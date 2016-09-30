@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SporSalonuOtomasyonuModelStoreContainer" CdmEntityContainer="SporSalonuOtomasyonuEntities">
+    <EntitySetMapping Name="UyeBilgisi">
+      <EntityTypeMapping TypeName="SporSalonuOtomasyonuModel.UyeBilgisi">
+        <MappingFragment StoreEntitySet="UyeBilgisi">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KimlikNo" ColumnName="KimlikNo" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="UyeOlunanTarih" ColumnName="UyeOlunanTarih" />
+          <ScalarProperty Name="UyelikBitisTarihi" ColumnName="UyelikBitisTarihi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="testTablo">
+      <EntityTypeMapping TypeName="SporSalonuOtomasyonuModel.testTablo">
+        <MappingFragment StoreEntitySet="testTablo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KimlikNo" ColumnName="KimlikNo" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="UyeOlunanTarih" ColumnName="UyeOlunanTarih" />
+          <ScalarProperty Name="UyelikBitisTarihi" ColumnName="UyelikBitisTarihi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

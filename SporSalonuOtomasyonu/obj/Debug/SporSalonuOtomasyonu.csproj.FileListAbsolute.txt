@@ -1,0 +1,35 @@
+C:\Users\kursa\Documents\Visual Studio 2013\Projects\SporSalonuOtomasyonu\SporSalonuOtomasyonu\bin\Debug\SporSalonuOtomasyonu.exe.config
+C:\Users\kursa\Documents\Visual Studio 2013\Projects\SporSalonuOtomasyonu\SporSalonuOtomasyonu\bin\Debug\SporSalonuOtomasyonu.exe
+C:\Users\kursa\Documents\Visual Studio 2013\Projects\SporSalonuOtomasyonu\SporSalonuOtomasyonu\bin\Debug\SporSalonuOtomasyonu.pdb
+C:\Users\kursa\Documents\Visual Studio 2013\Projects\SporSalonuOtomasyonu\SporSalonuOtomasyonu\obj\Debug\SporSalonuOtomasyonu.csprojResolveAssemblyReference.cache
+C:\Users\kursa\Documents\Visual Studio 2013\Projects\SporSalonuOtomasyonu\SporSalonuOtomasyonu\obj\Debug\SporSalonuOtomasyonu.Properties.Resources.resources
+C:\Users\kursa\Documents\Visual Studio 2013\Projects\SporSalonuOtomasyonu\SporSalonuOtomasyonu\obj\Debug\SporSalonuOtomasyonu.csproj.GenerateResource.Cache
+C:\Users\kursa\Documents\Visual Studio 2013\Projects\SporSalonuOtomasyonu\SporSalonuOtomasyonu\obj\Debug\SporSalonuOtomasyonu.exe
+C:\Users\kursa\Documents\Visual Studio 2013\Projects\SporSalonuOtomasyonu\SporSalonuOtomasyonu\obj\Debug\SporSalonuOtomasyonu.pdb
+C:\Users\kursa\Documents\Visual Studio 2013\Projects\SporSalonuOtomasyonu\SporSalonuOtomasyonu\obj\Debug\SporSalonuOtomasyonu.Islemler.resources
+C:\Users\kursa\Documents\Visual Studio 2013\Projects\SporSalonuOtomasyonu\SporSalonuOtomasyonu\obj\Debug\SporSalonuOtomasyonu.KullaniciGirisi.resources
+C:\Users\kursa\Desktop\SporSalonuOtomasyonu\SporSalonuOtomasyonu\bin\Debug\SporSalonuOtomasyonu.exe.config
+C:\Users\kursa\Desktop\SporSalonuOtomasyonu\SporSalonuOtomasyonu\bin\Debug\SporSalonuOtomasyonu.exe
+C:\Users\kursa\Desktop\SporSalonuOtomasyonu\SporSalonuOtomasyonu\bin\Debug\SporSalonuOtomasyonu.pdb
+C:\Users\kursa\Desktop\SporSalonuOtomasyonu\SporSalonuOtomasyonu\obj\Debug\SporSalonuOtomasyonu.Islemler.resources
+C:\Users\kursa\Desktop\SporSalonuOtomasyonu\SporSalonuOtomasyonu\obj\Debug\SporSalonuOtomasyonu.KullaniciGirisi.resources
+C:\Users\kursa\Desktop\SporSalonuOtomasyonu\SporSalonuOtomasyonu\obj\Debug\SporSalonuOtomasyonu.Properties.Resources.resources
+C:\Users\kursa\Desktop\SporSalonuOtomasyonu\SporSalonuOtomasyonu\obj\Debug\SporSalonuOtomasyonu.csproj.GenerateResource.Cache
+C:\Users\kursa\Desktop\SporSalonuOtomasyonu\SporSalonuOtomasyonu\obj\Debug\SporSalonuOtomasyonu.exe
+C:\Users\kursa\Desktop\SporSalonuOtomasyonu\SporSalonuOtomasyonu\obj\Debug\SporSalonuOtomasyonu.pdb
+C:\Users\kursa\Desktop\SporSalonuOtomasyonu\SporSalonuOtomasyonu\obj\Debug\SporSalonuOtomasyonu.csprojResolveAssemblyReference.cache
+C:\Users\Asusnb\Desktop\SporSalonuOtomasyonu\SporSalonuOtomasyonu\obj\Debug\SporSalonuOtomasyonu.exe
+C:\Users\Asusnb\Desktop\SporSalonuOtomasyonu\SporSalonuOtomasyonu\obj\Debug\SporSalonuOtomasyonu.Islemler.resources
+C:\Users\Asusnb\Desktop\SporSalonuOtomasyonu\SporSalonuOtomasyonu\obj\Debug\SporSalonuOtomasyonu.KullaniciGirisi.resources
+C:\Users\Asusnb\Desktop\SporSalonuOtomasyonu\SporSalonuOtomasyonu\obj\Debug\SporSalonuOtomasyonu.Properties.Resources.resources
+C:\Users\Asusnb\Desktop\SporSalonuOtomasyonu\SporSalonuOtomasyonu\obj\Debug\SporSalonuOtomasyonu.csproj.GenerateResource.Cache
+C:\Users\Asusnb\Desktop\SporSalonuOtomasyonu\SporSalonuOtomasyonu\obj\Debug\SporSalonuOtomasyonu.pdb
+C:\Users\Asusnb\Desktop\SporSalonuOtomasyonu\SporSalonuOtomasyonu\bin\Debug\SporSalonuOtomasyonu.exe.config
+C:\Users\Asusnb\Desktop\SporSalonuOtomasyonu\SporSalonuOtomasyonu\bin\Debug\SporSalonuOtomasyonu.exe
+C:\Users\Asusnb\Desktop\SporSalonuOtomasyonu\SporSalonuOtomasyonu\bin\Debug\SporSalonuOtomasyonu.pdb
+C:\Users\Asusnb\Desktop\SporSalonuOtomasyonu\SporSalonuOtomasyonu\bin\Debug\EntityFramework.dll
+C:\Users\Asusnb\Desktop\SporSalonuOtomasyonu\SporSalonuOtomasyonu\bin\Debug\GitVersionCore.dll
+C:\Users\Asusnb\Desktop\SporSalonuOtomasyonu\SporSalonuOtomasyonu\bin\Debug\EntityFramework.xml
+C:\Users\Asusnb\Desktop\SporSalonuOtomasyonu\SporSalonuOtomasyonu\bin\Debug\GitVersionCore.pdb
+C:\Users\Asusnb\Desktop\SporSalonuOtomasyonu\SporSalonuOtomasyonu\bin\Debug\GitVersionCore.xml
+C:\Users\Asusnb\Desktop\SporSalonuOtomasyonu\SporSalonuOtomasyonu\obj\Debug\SporSalonuOtomasyonu.csprojResolveAssemblyReference.cache

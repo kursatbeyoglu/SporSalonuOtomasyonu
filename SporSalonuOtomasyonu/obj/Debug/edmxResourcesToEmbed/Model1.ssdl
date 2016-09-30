@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SporSalonuOtomasyonuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'SporSalonuOtomasyonu.dbo.Kullanici' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Kullanici">
+          <Property Name="ID" Type="int" />
+          <Property Name="Ad" Type="nvarchar" MaxLength="50" />
+          <Property Name="Soyad" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sifre" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SporSalonuOtomasyonu.dbo.testTablo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="testTablo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KimlikNo" Type="char" MaxLength="11" />
+    <Property Name="Ad" Type="nvarchar" MaxLength="30" />
+    <Property Name="Soyad" Type="nvarchar" MaxLength="30" />
+    <Property Name="Telefon" Type="char" MaxLength="13" />
+    <Property Name="UyeOlunanTarih" Type="date" />
+    <Property Name="UyelikBitisTarihi" Type="date" />
+  </EntityType>
+  <EntityType Name="UyeBilgisi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KimlikNo" Type="char" MaxLength="11" />
+    <Property Name="Ad" Type="nvarchar" MaxLength="30" />
+    <Property Name="Soyad" Type="nvarchar" MaxLength="30" />
+    <Property Name="Telefon" Type="char" MaxLength="13" />
+    <Property Name="UyeOlunanTarih" Type="date" />
+    <Property Name="UyelikBitisTarihi" Type="date" />
+  </EntityType>
+  <EntityContainer Name="SporSalonuOtomasyonuModelStoreContainer">
+    <EntitySet Name="UyeBilgisi" EntityType="Self.UyeBilgisi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="testTablo" EntityType="Self.testTablo" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[testTablo].[ID] AS [ID], 
+[testTablo].[KimlikNo] AS [KimlikNo], 
+[testTablo].[Ad] AS [Ad], 
+[testTablo].[Soyad] AS [Soyad], 
+[testTablo].[Telefon] AS [Telefon], 
+[testTablo].[UyeOlunanTarih] AS [UyeOlunanTarih], 
+[testTablo].[UyelikBitisTarihi] AS [UyelikBitisTarihi]
+FROM [dbo].[testTablo] AS [testTablo]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

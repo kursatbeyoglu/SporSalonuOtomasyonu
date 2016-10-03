@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tpUyeIslemler = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.txtEkleAciklama = new System.Windows.Forms.TextBox();
@@ -51,21 +52,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnKayitSil = new System.Windows.Forms.Button();
+            this.btnSilKayit = new System.Windows.Forms.Button();
             this.txtSilKimlikNo = new System.Windows.Forms.TextBox();
             this.lblKimlikNo = new System.Windows.Forms.Label();
             this.richTextBoxUyari = new System.Windows.Forms.RichTextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.btnGuncelleTemizle = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxGuncelleAciklama = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.rbGuncelle6Aylik = new System.Windows.Forms.RadioButton();
+            this.rbGuncelle3Aylik = new System.Windows.Forms.RadioButton();
+            this.rbGuncelle2Aylik = new System.Windows.Forms.RadioButton();
+            this.rbGuncelle1Aylik = new System.Windows.Forms.RadioButton();
+            this.datetimeGuncelleUyelikSonlanacakTarih = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
-            this.btnKaydiGuncelle = new System.Windows.Forms.Button();
+            this.btnGuncelleKayit = new System.Windows.Forms.Button();
             this.txtGuncelleTelefon = new System.Windows.Forms.TextBox();
             this.txtGuncelleSoyad = new System.Windows.Forms.TextBox();
             this.txtGuncelleAd = new System.Windows.Forms.TextBox();
@@ -80,12 +81,25 @@
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.UyeTablosu = new System.Windows.Forms.DataGridView();
+            this.ıDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kimlikNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uyeOlunanTarihDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uyelikBitisTarihiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uyeDurumuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aciklamaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uyeBilgisiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dateTimeGuncelleUyelikBaslangic = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
             this.tpUyeIslemler.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UyeTablosu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uyeBilgisiBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tpUyeIslemler
@@ -132,7 +146,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Kayıt Ekle";
             this.tabPage1.UseVisualStyleBackColor = true;
-            
             // 
             // txtEkleAciklama
             // 
@@ -329,7 +342,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.btnKayitSil);
+            this.tabPage2.Controls.Add(this.btnSilKayit);
             this.tabPage2.Controls.Add(this.txtSilKimlikNo);
             this.tabPage2.Controls.Add(this.lblKimlikNo);
             this.tabPage2.Controls.Add(this.richTextBoxUyari);
@@ -342,23 +355,25 @@
             this.tabPage2.Text = "Kayıt Sil";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // btnKayitSil
+            // btnSilKayit
             // 
-            this.btnKayitSil.Location = new System.Drawing.Point(131, 111);
-            this.btnKayitSil.Margin = new System.Windows.Forms.Padding(4);
-            this.btnKayitSil.Name = "btnKayitSil";
-            this.btnKayitSil.Size = new System.Drawing.Size(100, 28);
-            this.btnKayitSil.TabIndex = 3;
-            this.btnKayitSil.Text = "Kaydı Sil";
-            this.btnKayitSil.UseVisualStyleBackColor = true;
+            this.btnSilKayit.Location = new System.Drawing.Point(131, 139);
+            this.btnSilKayit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSilKayit.Name = "btnSilKayit";
+            this.btnSilKayit.Size = new System.Drawing.Size(100, 28);
+            this.btnSilKayit.TabIndex = 3;
+            this.btnSilKayit.Text = "Kaydı Sil";
+            this.btnSilKayit.UseVisualStyleBackColor = true;
+            this.btnSilKayit.Click += new System.EventHandler(this.btnSilKayit_Click);
             // 
             // txtSilKimlikNo
             // 
-            this.txtSilKimlikNo.Location = new System.Drawing.Point(131, 79);
+            this.txtSilKimlikNo.Location = new System.Drawing.Point(129, 84);
             this.txtSilKimlikNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtSilKimlikNo.Name = "txtSilKimlikNo";
             this.txtSilKimlikNo.Size = new System.Drawing.Size(132, 22);
             this.txtSilKimlikNo.TabIndex = 2;
+            this.txtSilKimlikNo.TextChanged += new System.EventHandler(this.txtSilKimlikNo_TextChanged);
             // 
             // lblKimlikNo
             // 
@@ -374,7 +389,7 @@
             // 
             this.richTextBoxUyari.BackColor = System.Drawing.Color.LightSteelBlue;
             this.richTextBoxUyari.Enabled = false;
-            this.richTextBoxUyari.Location = new System.Drawing.Point(8, 7);
+            this.richTextBoxUyari.Location = new System.Drawing.Point(8, 8);
             this.richTextBoxUyari.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBoxUyari.Name = "richTextBoxUyari";
             this.richTextBoxUyari.Size = new System.Drawing.Size(179, 53);
@@ -383,16 +398,18 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.dateTimeGuncelleUyelikBaslangic);
+            this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Controls.Add(this.btnGuncelleTemizle);
-            this.tabPage3.Controls.Add(this.textBox1);
+            this.tabPage3.Controls.Add(this.textBoxGuncelleAciklama);
             this.tabPage3.Controls.Add(this.label5);
-            this.tabPage3.Controls.Add(this.radioButton5);
-            this.tabPage3.Controls.Add(this.radioButton6);
-            this.tabPage3.Controls.Add(this.radioButton7);
-            this.tabPage3.Controls.Add(this.radioButton8);
-            this.tabPage3.Controls.Add(this.dateTimePicker1);
+            this.tabPage3.Controls.Add(this.rbGuncelle6Aylik);
+            this.tabPage3.Controls.Add(this.rbGuncelle3Aylik);
+            this.tabPage3.Controls.Add(this.rbGuncelle2Aylik);
+            this.tabPage3.Controls.Add(this.rbGuncelle1Aylik);
+            this.tabPage3.Controls.Add(this.datetimeGuncelleUyelikSonlanacakTarih);
             this.tabPage3.Controls.Add(this.label10);
-            this.tabPage3.Controls.Add(this.btnKaydiGuncelle);
+            this.tabPage3.Controls.Add(this.btnGuncelleKayit);
             this.tabPage3.Controls.Add(this.txtGuncelleTelefon);
             this.tabPage3.Controls.Add(this.txtGuncelleSoyad);
             this.tabPage3.Controls.Add(this.txtGuncelleAd);
@@ -412,106 +429,108 @@
             // 
             // btnGuncelleTemizle
             // 
-            this.btnGuncelleTemizle.Location = new System.Drawing.Point(153, 365);
+            this.btnGuncelleTemizle.Location = new System.Drawing.Point(205, 413);
             this.btnGuncelleTemizle.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuncelleTemizle.Name = "btnGuncelleTemizle";
-            this.btnGuncelleTemizle.Size = new System.Drawing.Size(128, 34);
+            this.btnGuncelleTemizle.Size = new System.Drawing.Size(198, 34);
             this.btnGuncelleTemizle.TabIndex = 37;
             this.btnGuncelleTemizle.Text = "Temizle";
             this.btnGuncelleTemizle.UseVisualStyleBackColor = true;
+            this.btnGuncelleTemizle.Click += new System.EventHandler(this.btnGuncelleTemizle_Click);
             // 
-            // textBox1
+            // textBoxGuncelleAciklama
             // 
-            this.textBox1.Location = new System.Drawing.Point(107, 277);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(238, 62);
-            this.textBox1.TabIndex = 36;
+            this.textBoxGuncelleAciklama.Location = new System.Drawing.Point(81, 333);
+            this.textBoxGuncelleAciklama.Multiline = true;
+            this.textBoxGuncelleAciklama.Name = "textBoxGuncelleAciklama";
+            this.textBoxGuncelleAciklama.Size = new System.Drawing.Size(238, 62);
+            this.textBoxGuncelleAciklama.TabIndex = 36;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 277);
+            this.label5.Location = new System.Drawing.Point(7, 333);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 17);
             this.label5.TabIndex = 35;
             this.label5.Text = "Açıklama:";
             // 
-            // radioButton5
+            // rbGuncelle6Aylik
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(107, 235);
-            this.radioButton5.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(70, 21);
-            this.radioButton5.TabIndex = 34;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "6 Aylık";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.rbGuncelle6Aylik.AutoSize = true;
+            this.rbGuncelle6Aylik.Location = new System.Drawing.Point(107, 264);
+            this.rbGuncelle6Aylik.Margin = new System.Windows.Forms.Padding(4);
+            this.rbGuncelle6Aylik.Name = "rbGuncelle6Aylik";
+            this.rbGuncelle6Aylik.Size = new System.Drawing.Size(70, 21);
+            this.rbGuncelle6Aylik.TabIndex = 34;
+            this.rbGuncelle6Aylik.TabStop = true;
+            this.rbGuncelle6Aylik.Text = "6 Aylık";
+            this.rbGuncelle6Aylik.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // rbGuncelle3Aylik
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(17, 235);
-            this.radioButton6.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(70, 21);
-            this.radioButton6.TabIndex = 33;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "3 Aylık";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.rbGuncelle3Aylik.AutoSize = true;
+            this.rbGuncelle3Aylik.Location = new System.Drawing.Point(17, 264);
+            this.rbGuncelle3Aylik.Margin = new System.Windows.Forms.Padding(4);
+            this.rbGuncelle3Aylik.Name = "rbGuncelle3Aylik";
+            this.rbGuncelle3Aylik.Size = new System.Drawing.Size(70, 21);
+            this.rbGuncelle3Aylik.TabIndex = 33;
+            this.rbGuncelle3Aylik.TabStop = true;
+            this.rbGuncelle3Aylik.Text = "3 Aylık";
+            this.rbGuncelle3Aylik.UseVisualStyleBackColor = true;
             // 
-            // radioButton7
+            // rbGuncelle2Aylik
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(107, 206);
-            this.radioButton7.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(70, 21);
-            this.radioButton7.TabIndex = 32;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "2 Aylık";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.rbGuncelle2Aylik.AutoSize = true;
+            this.rbGuncelle2Aylik.Location = new System.Drawing.Point(107, 235);
+            this.rbGuncelle2Aylik.Margin = new System.Windows.Forms.Padding(4);
+            this.rbGuncelle2Aylik.Name = "rbGuncelle2Aylik";
+            this.rbGuncelle2Aylik.Size = new System.Drawing.Size(70, 21);
+            this.rbGuncelle2Aylik.TabIndex = 32;
+            this.rbGuncelle2Aylik.TabStop = true;
+            this.rbGuncelle2Aylik.Text = "2 Aylık";
+            this.rbGuncelle2Aylik.UseVisualStyleBackColor = true;
             // 
-            // radioButton8
+            // rbGuncelle1Aylik
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(17, 206);
-            this.radioButton8.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(70, 21);
-            this.radioButton8.TabIndex = 31;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "1 Aylık";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.rbGuncelle1Aylik.AutoSize = true;
+            this.rbGuncelle1Aylik.Location = new System.Drawing.Point(17, 235);
+            this.rbGuncelle1Aylik.Margin = new System.Windows.Forms.Padding(4);
+            this.rbGuncelle1Aylik.Name = "rbGuncelle1Aylik";
+            this.rbGuncelle1Aylik.Size = new System.Drawing.Size(70, 21);
+            this.rbGuncelle1Aylik.TabIndex = 31;
+            this.rbGuncelle1Aylik.TabStop = true;
+            this.rbGuncelle1Aylik.Text = "1 Aylık";
+            this.rbGuncelle1Aylik.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // datetimeGuncelleUyelikSonlanacakTarih
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(176, 162);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(227, 22);
-            this.dateTimePicker1.TabIndex = 30;
+            this.datetimeGuncelleUyelikSonlanacakTarih.Location = new System.Drawing.Point(181, 296);
+            this.datetimeGuncelleUyelikSonlanacakTarih.Margin = new System.Windows.Forms.Padding(4);
+            this.datetimeGuncelleUyelikSonlanacakTarih.Name = "datetimeGuncelleUyelikSonlanacakTarih";
+            this.datetimeGuncelleUyelikSonlanacakTarih.Size = new System.Drawing.Size(227, 22);
+            this.datetimeGuncelleUyelikSonlanacakTarih.TabIndex = 30;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 167);
+            this.label10.Location = new System.Drawing.Point(8, 301);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(169, 17);
             this.label10.TabIndex = 29;
             this.label10.Text = "Üyeliğin Sonlandığı Tarih:";
             // 
-            // btnKaydiGuncelle
+            // btnGuncelleKayit
             // 
-            this.btnKaydiGuncelle.Location = new System.Drawing.Point(17, 365);
-            this.btnKaydiGuncelle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnKaydiGuncelle.Name = "btnKaydiGuncelle";
-            this.btnKaydiGuncelle.Size = new System.Drawing.Size(128, 34);
-            this.btnKaydiGuncelle.TabIndex = 28;
-            this.btnKaydiGuncelle.Text = "Kaydı Güncelle";
-            this.btnKaydiGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelleKayit.Location = new System.Drawing.Point(8, 413);
+            this.btnGuncelleKayit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuncelleKayit.Name = "btnGuncelleKayit";
+            this.btnGuncelleKayit.Size = new System.Drawing.Size(178, 34);
+            this.btnGuncelleKayit.TabIndex = 28;
+            this.btnGuncelleKayit.Text = "Kaydı Güncelle";
+            this.btnGuncelleKayit.UseVisualStyleBackColor = true;
+            this.btnGuncelleKayit.Click += new System.EventHandler(this.btnGuncelleKayit_Click);
             // 
             // txtGuncelleTelefon
             // 
@@ -640,13 +659,110 @@
             // 
             this.UyeTablosu.AllowUserToAddRows = false;
             this.UyeTablosu.AllowUserToDeleteRows = false;
+            this.UyeTablosu.AutoGenerateColumns = false;
             this.UyeTablosu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.UyeTablosu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ıDDataGridViewTextBoxColumn,
+            this.kimlikNoDataGridViewTextBoxColumn,
+            this.adDataGridViewTextBoxColumn,
+            this.soyadDataGridViewTextBoxColumn,
+            this.telefonDataGridViewTextBoxColumn,
+            this.uyeOlunanTarihDataGridViewTextBoxColumn,
+            this.uyelikBitisTarihiDataGridViewTextBoxColumn,
+            this.uyeDurumuDataGridViewTextBoxColumn,
+            this.aciklamaDataGridViewTextBoxColumn});
+            this.UyeTablosu.DataSource = this.uyeBilgisiBindingSource;
             this.UyeTablosu.Location = new System.Drawing.Point(446, 40);
             this.UyeTablosu.Name = "UyeTablosu";
             this.UyeTablosu.ReadOnly = true;
             this.UyeTablosu.RowTemplate.Height = 24;
-            this.UyeTablosu.Size = new System.Drawing.Size(1300, 850);
+            this.UyeTablosu.Size = new System.Drawing.Size(964, 850);
             this.UyeTablosu.TabIndex = 3;
+            // 
+            // ıDDataGridViewTextBoxColumn
+            // 
+            this.ıDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.ıDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.ıDDataGridViewTextBoxColumn.Name = "ıDDataGridViewTextBoxColumn";
+            this.ıDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // kimlikNoDataGridViewTextBoxColumn
+            // 
+            this.kimlikNoDataGridViewTextBoxColumn.DataPropertyName = "KimlikNo";
+            this.kimlikNoDataGridViewTextBoxColumn.HeaderText = "Kimlik No";
+            this.kimlikNoDataGridViewTextBoxColumn.Name = "kimlikNoDataGridViewTextBoxColumn";
+            this.kimlikNoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // adDataGridViewTextBoxColumn
+            // 
+            this.adDataGridViewTextBoxColumn.DataPropertyName = "Ad";
+            this.adDataGridViewTextBoxColumn.HeaderText = "Ad";
+            this.adDataGridViewTextBoxColumn.Name = "adDataGridViewTextBoxColumn";
+            this.adDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // soyadDataGridViewTextBoxColumn
+            // 
+            this.soyadDataGridViewTextBoxColumn.DataPropertyName = "Soyad";
+            this.soyadDataGridViewTextBoxColumn.HeaderText = "Soyad";
+            this.soyadDataGridViewTextBoxColumn.Name = "soyadDataGridViewTextBoxColumn";
+            this.soyadDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telefonDataGridViewTextBoxColumn
+            // 
+            this.telefonDataGridViewTextBoxColumn.DataPropertyName = "Telefon";
+            this.telefonDataGridViewTextBoxColumn.HeaderText = "Telefon";
+            this.telefonDataGridViewTextBoxColumn.Name = "telefonDataGridViewTextBoxColumn";
+            this.telefonDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // uyeOlunanTarihDataGridViewTextBoxColumn
+            // 
+            this.uyeOlunanTarihDataGridViewTextBoxColumn.DataPropertyName = "UyeOlunanTarih";
+            this.uyeOlunanTarihDataGridViewTextBoxColumn.HeaderText = "Üyelik Tarihi";
+            this.uyeOlunanTarihDataGridViewTextBoxColumn.Name = "uyeOlunanTarihDataGridViewTextBoxColumn";
+            this.uyeOlunanTarihDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // uyelikBitisTarihiDataGridViewTextBoxColumn
+            // 
+            this.uyelikBitisTarihiDataGridViewTextBoxColumn.DataPropertyName = "UyelikBitisTarihi";
+            this.uyelikBitisTarihiDataGridViewTextBoxColumn.HeaderText = "Üyelik Bitişi";
+            this.uyelikBitisTarihiDataGridViewTextBoxColumn.Name = "uyelikBitisTarihiDataGridViewTextBoxColumn";
+            this.uyelikBitisTarihiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // uyeDurumuDataGridViewTextBoxColumn
+            // 
+            this.uyeDurumuDataGridViewTextBoxColumn.DataPropertyName = "UyeDurumu";
+            this.uyeDurumuDataGridViewTextBoxColumn.HeaderText = "Üyelik Durumu";
+            this.uyeDurumuDataGridViewTextBoxColumn.Name = "uyeDurumuDataGridViewTextBoxColumn";
+            this.uyeDurumuDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // aciklamaDataGridViewTextBoxColumn
+            // 
+            this.aciklamaDataGridViewTextBoxColumn.DataPropertyName = "Aciklama";
+            this.aciklamaDataGridViewTextBoxColumn.HeaderText = "Açiklama";
+            this.aciklamaDataGridViewTextBoxColumn.Name = "aciklamaDataGridViewTextBoxColumn";
+            this.aciklamaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // uyeBilgisiBindingSource
+            // 
+            this.uyeBilgisiBindingSource.DataSource = typeof(SporSalonuOtomasyonu.UyeBilgisi);
+            // 
+            // dateTimeGuncelleUyelikBaslangic
+            // 
+            this.dateTimeGuncelleUyelikBaslangic.Location = new System.Drawing.Point(181, 187);
+            this.dateTimeGuncelleUyelikBaslangic.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimeGuncelleUyelikBaslangic.Name = "dateTimeGuncelleUyelikBaslangic";
+            this.dateTimeGuncelleUyelikBaslangic.Size = new System.Drawing.Size(227, 22);
+            this.dateTimeGuncelleUyelikBaslangic.TabIndex = 39;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(8, 192);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(155, 17);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "Üyelik Başlangıç Tarihi:";
             // 
             // Islemler
             // 
@@ -655,7 +771,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.BackgroundImage = global::SporSalonuOtomasyonu.Properties.Resources.dovus;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1332, 853);
+            this.ClientSize = new System.Drawing.Size(1914, 962);
             this.Controls.Add(this.UyeTablosu);
             this.Controls.Add(this.tpUyeIslemler);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -673,6 +789,7 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UyeTablosu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uyeBilgisiBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -699,7 +816,7 @@
         private System.Windows.Forms.RadioButton rbEkle1Aylik;
         private System.Windows.Forms.Button btnEkleKayit;
         private System.Windows.Forms.RichTextBox richTextBoxUyari;
-        private System.Windows.Forms.Button btnKayitSil;
+        private System.Windows.Forms.Button btnSilKayit;
         private System.Windows.Forms.TextBox txtSilKimlikNo;
         private System.Windows.Forms.Label lblKimlikNo;
         private System.Windows.Forms.TextBox txtGuncelleTelefon;
@@ -710,12 +827,12 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button btnKaydiGuncelle;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btnGuncelleKayit;
+        private System.Windows.Forms.RadioButton rbGuncelle6Aylik;
+        private System.Windows.Forms.RadioButton rbGuncelle3Aylik;
+        private System.Windows.Forms.RadioButton rbGuncelle2Aylik;
+        private System.Windows.Forms.RadioButton rbGuncelle1Aylik;
+        private System.Windows.Forms.DateTimePicker datetimeGuncelleUyelikSonlanacakTarih;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TextBox textBox10;
@@ -728,9 +845,21 @@
         private System.Windows.Forms.Button btnEkleTemizle;
         private System.Windows.Forms.TextBox txtEkleAciklama;
         private System.Windows.Forms.Label lblAciklama;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxGuncelleAciklama;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnGuncelleTemizle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ıDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kimlikNoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soyadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefonDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uyeOlunanTarihDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uyelikBitisTarihiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uyeDurumuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aciklamaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource uyeBilgisiBindingSource;
+        private System.Windows.Forms.DateTimePicker dateTimeGuncelleUyelikBaslangic;
+        private System.Windows.Forms.Label label6;
 
     }
 }

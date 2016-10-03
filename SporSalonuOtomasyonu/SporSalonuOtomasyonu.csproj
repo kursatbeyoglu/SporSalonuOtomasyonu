@@ -123,6 +123,9 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\SporSalonuOtomasyonuEntities.datasource" />
+    <None Include="Properties\DataSources\testTablo.datasource" />
+    <None Include="Properties\DataSources\UyeBilgisi.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

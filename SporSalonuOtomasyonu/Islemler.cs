@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace SporSalonuOtomasyonu
 {
@@ -16,6 +17,7 @@ namespace SporSalonuOtomasyonu
         
         SporSalonuOtomasyonuEntities db;
         //veritabanı nesnesi oluşturulur.
+        
 
         void doldur()
         {
@@ -23,6 +25,7 @@ namespace SporSalonuOtomasyonu
             UyeTablosu.DataSource = db.testTablo.ToList();
             
             //verileri çekmek için kullanılır.
+            //UyeTablosu datagridviewin adıdır.
         }
 
         public Islemler()
@@ -47,6 +50,7 @@ namespace SporSalonuOtomasyonu
             yenikullanici.Soyad = txtEkleSoyad.Text;
             yenikullanici.Telefon = txtEkleTelefon.Text;
             yenikullanici.UyeOlunanTarih = dateTimeEkleUyeTarih.Value;
+            
             if (rbEkle1Aylik.Checked == true)
                 yenikullanici.AylikBilgisi = "1 Aylik";
             else if (rbEkle2Aylik.Checked == true)
@@ -55,8 +59,11 @@ namespace SporSalonuOtomasyonu
                 yenikullanici.AylikBilgisi = "3 Aylik";
             else if (rbEkle4Aylik.Checked == true)
                 yenikullanici.AylikBilgisi = "4 Aylik";
+            
+           
 
             yenikullanici.UyelikBitisTarihi = dateTimeEkleUyelikBitis.Value;
+            yenikullanici.Aciklama = txtEkleAciklama.Text;
 
             db.testTablo.Add(yenikullanici);
             db.SaveChanges();
@@ -82,6 +89,54 @@ namespace SporSalonuOtomasyonu
             dateTimeEkleUyelikBitis.Value = DateTime.Now;
             txtEkleAciklama.Text = "";
                      
+        }
+
+
+
+
+
+        //bir numara yazıldığında var olup olmadığının kontrolüde yapılacak!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+        private void btnSilKayit_Click(object sender, EventArgs e)
+        {
+            string sil = txtSilKimlikNo.Text;
+            var silkisi = db.testTablo.Where(silinicek => silinicek.KimlikNo == sil).FirstOrDefault();
+            db.testTablo.Remove(silkisi);
+            db.SaveChanges();
+            doldur();
+        }
+
+        private void txtSilKimlikNo_TextChanged(object sender, EventArgs e)
+        {
+
+            //arama algoritmasını yaz mutlaka !!!!!!!!!!!!!!!!!!!!
+            
+
+        }
+
+        private void btnGuncelleTemizle_Click(object sender, EventArgs e)
+        {
+            txtGuncelleKimlik.Text = "";
+            txtGuncelleAd.Text="";
+            txtGuncelleSoyad.Text="";
+            txtGuncelleTelefon.Text = "";
+            dateTimeGuncelleUyelikBaslangic.Value = DateTime.Now;
+            rbGuncelle1Aylik.Checked = false;
+            rbGuncelle2Aylik.Checked = false;
+            rbGuncelle3Aylik.Checked = false;
+            rbGuncelle6Aylik.Checked = false;
+            datetimeGuncelleUyelikSonlanacakTarih.Value = DateTime.Now;
+            textBoxGuncelleAciklama.Text = "";
+
+
+        }
+
+        private void btnGuncelleKayit_Click(object sender, EventArgs e)
+        {
+
         }
 
         
